@@ -1,0 +1,13 @@
+version: '2.4'
+
+services:
+  app:
+    build:
+      target: build
+      context: .
+    image: peedrofl/full-cycle-4-docker-hello-world
+    command: go run main.go
+    ports:
+      - 8080:8080
+    volumes:
+      - ./src/:/usr/src/app:delegated
